@@ -1,0 +1,12 @@
+<h1 *ngIf="cliente" >Bem vindo {{cliente.nome}}</h1>
+<ul>
+  <li><b>Telefone</b>: {{cliente.telefone}}</li>
+  <li><b>Email</b>: {{cliente.email}}</li>
+</ul>
+<hr>
+
+<button (click)="enviarSMS(cliente)">Enviar SMS</button>
+<button (click)="enviarEmail(cliente)">Enviar Email</button>
+<button (click)="fazerPagamento(cliente)">Fazer pagamento</button>
+
+<div *ngIf="mensagem" style="color: rgb(131, 131, 11)">{{mensagem}}</div>
